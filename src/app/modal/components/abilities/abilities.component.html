@@ -1,0 +1,26 @@
+<div class="pt-3 pb-3 ps-5 pe-5 bg-light">
+    <form autocomplete="off">
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="col-md-9">
+                <div class="selectdiv">
+                    <input autocomplete="false" class="form-control" id="searchInput" value={{inputText}} placeholder="name@example.com" (focus)="showOptions()" (blur)="closeOptions($event)">
+                    <div *ngIf="showOptionsStatus" class="p-2 bg-white border rounded-bottom">
+                        <div class="ps-3 pe-3 selectDivSearch">
+                            <input [(ngModel)]="filterWord" autocomplete="false" name="filterWord" class="form-control"  id="searchInput" type="text" placeholder="Buscar..." spellcheck="false"(blur)="closeOptions($event)">
+                        </div>
+                        <div style="margin-top: 3em;">
+                            <p id="searchInput" *ngFor="let ability of abilities | abilities:filterWord" class="options" (click)="onClickOption()">
+                                <span class="fw-bold">M.{{ability.idcompetencia}}. </span>{{ability.descripcioncompetencia}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="d-grid gap-2">
+                    <button type="button" name="" id="" class="btn btn-primary">+Añadir Destreza</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,10 @@
+.options{
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.options:hover{
+    background: rgb(242, 242, 242);
+}

@@ -1,0 +1,19 @@
+<form>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label fw-semibold">Estudiantes con necesidades educativas</label>
+        <div class="selectdiv">
+            <select class="form-select" id="exampleInputEmail1" aria-describedby="emailHelp" (change)="onChange($event)">
+                <option selected value="">Selecciona un estudiante</option>
+                <option *ngFor="let student of students" value={{student.idestudiante}}>{{student.nombreestudiante}}</option>
+              </select>
+        </div>
+    </div>
+</form>
+<div style="margin-top: 3em;" *ngIf="studentNEESelected !== undefined">
+    <div class="card border rounded-0" *ngFor="let disability of studentNEESelected.discapacidades ">
+      <div class="card-body">
+        <p class="card-text"><span class="fw-bold">Especificación de la NEE: </span>{{disability.nombrediscapacidad}}</p>
+        <p class="card-text"><span class="fw-bold">Grado de adaptación: </span>{{studentNEESelected.gradoadaptacioncurricular1}}</p>
+      </div>
+    </div>
+</div>

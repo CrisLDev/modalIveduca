@@ -1,1 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.pointer{
+    cursor: pointer;
+}
+
+.form-select{
+    background-image: none!important;
+}
+
+.selectdiv {
+    position: relative;
+    /*Don't really need this just for demo styling*/
+    
+    float: left;
+    min-width: 100%;
+  }
+
+.selectdiv:after {
+    background: rgb(236, 235, 235);
+    content: '<>';
+    font: 17px "Consolas", monospace;
+    color: rgb(44, 57, 151);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    right: -7px;
+    /*Adjust for position however you want*/
+
+    top: 8.8px;
+    padding: 0.5em;
+    border-bottom: 1px solid #ced4da;
+    border-top-left-radius: 6.6px;
+    border-top-right-radius: 6.6px;
+    line-height: 0;
+    height: 20px;
+    /*left line */
+    
+    position: absolute;
+    pointer-events: none;
+  }
+
+.selectDivSearch {
+    position: relative;
+    /*Don't really need this just for demo styling*/
+    
+    float: left;
+    min-width: 100%;
+  }
+
+.selectDivSearch:after {
+    background: rgb(236, 235, 235);
+    content: '🔍';
+    font: 17px "Consolas", monospace;
+    color: rgb(44, 57, 151);
+    right: 16px;
+    /*Adjust for position however you want*/
+
+    top: 0;
+    padding: 0.5em;
+    border: 1px solid #ced4da;
+    border-top-right-radius: 6.6px;
+    border-bottom-right-radius: 6.6px;
+    height: 38px;
+    /*left line */
+    
+    position: absolute;
+    pointer-events: none;
+  }
